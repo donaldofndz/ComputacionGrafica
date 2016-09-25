@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onClick="coordenadas(event);">
+
+
+<img src="castores.png" >
+
+
+<form action="#">
+<label for="x">X: </label><input type="text" id="x">
+<label for="y">Y: </label><input type="text" id="y">
+</form>
+
+
+
+<script type="text/javascript">
+
+console.log("glLineWidth(1.0);")
+console.log("glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);")
+console.log("glBegin(GL_POLYGON);")
+console.log("glColor3f(0.07, 0.30, 0.30);")
+
+function coordenadas(event) {
+ x=event.clientX;
+ y=event.clientY;
+ 
+ document.getElementById("x").value = x;
+ document.getElementById("y").value = y;
+
+ console.log("glVertex3f("+ x + "," + y + ",-0.5 );" );
+ 
+}
+
+</script>
+
+
+
+
+</body>
+</html>
